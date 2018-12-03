@@ -1,11 +1,26 @@
-body{
-    padding: 0;
-    margin:0;
+/* --------------------------------- */
+/*          BASIC SETUP              */
+/* --------------------------------- */
+
+
+body,html{
+    padding-left:100px;
+    margin-left:100px;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bg.jpg);
-    background-size: cover;
-    box-sizing: border-box;
+    /* position: relative; */
+    /* background-size: cover;
+    /* box-sizing: border-box; */ */
     letter-spacing: 1px;
-  
+    background-position: center;
+    /* height: 100vh; */
+    background-attachment: fixed;
+    font-size: 25px;
+    font-family: 'Lobster',cursive;
+    line-height: 145%;
+    color:#fff;
+    font-weight: 100;
+    width: 700px;
+
 }
 ul{
     list-style: none;
@@ -20,58 +35,74 @@ li{
 li:hover{
     border-color:#f44;
 }
-
-header{
-    padding: 10px;
-    background-color:#6c614b;
-    box-shadow: 0 2px  #a3957a
-}
-form{
-    text-align: center;
-    padding: 10px;
-    
-}
-header input{
-    width: 100%;
-    height: 30px;
-}
-.books-list{
-    background-color:#9c8d70;
-    padding: 10px;
-}
-.add-book{
-    background-color: #6c614b;
-    padding:10px;
-}
-.wrapper{
-    position: fixed;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 25px;
-    font-family: 'Lobster',cursive;
-    line-height: 145%;
-    color:#fff;
-    font-weight: 100;
-}
 h1{
     text-align: center;
+}
+h2{
+    margin-top:10px;
 }
 p{
     font-size:70%;
     text-align: center;
     margin-top: -25px;
 }
-.app-banner{
-    margin-left: 40px;
+form{
+    text-align: center;
+    padding: 10px;
+    
 }
-.name{}
+
+/* --------------------------------- */
+/*         HEADER                    */
+/* --------------------------------- */
+
+
+header{
+    padding: 0 10px 0 10px;
+    background-color:#6c614b;
+    box-shadow: 0 2px  #a3957a;
+    height: auto;
+}
+
+header input{
+    width: 100%;
+    height: 30px;
+}
+
+.app-banner{
+    margin-left: 20px;
+    padding: 10px;
+}
+#hide{
+    width: 16px;
+   
+    
+}
+.app-banner label{
+   margin-top: 5px;
+    font-size: 16px;
+  
+  
+}
+
+/* --------------------------------- */
+/*         SECTION BOOK-LIST         */
+/* --------------------------------- */
+
+.books-list{
+    background-color:#9c8d70;
+    padding: 10px;
+    
+}
+.name{
+    font-size: 16px;
+}
 .delete,
 button{
     
     float: right;
     background: #302b21;
-    padding: 2px;
+    padding: 5px;
     border-radius: 4px;
     cursor: pointer;
     color: white;
@@ -82,26 +113,55 @@ button{
 .delete:hover{
     background-color: #f44;
 }
-button{
-    display: inline-block;
-    width: 80px;
-    height: 40px;
-    outline: none;
-    border: none;
-    font-family: 'Lobster',cursive;
+
+
+/* --------------------------------- */
+/*         SECTION ADD-BOOK         */
+/* --------------------------------- */
+
+.add-book{
+    background-color: #6c614b;
+    padding:10px;
+    height: auto;
+   
 }
 
-button:hover{
-    background-color: green;
+.add-book input[type="text"]{
+    display: block;
+    /* margin: 20px 10px; */
+    padding: 10px;
+    border: 1px solid #6c614b;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    width: 500px;
+    float: left;
+    margin-left: 10px;
 }
-.add-book input{
-    width: 65%;
-    height: 40px;
-    margin-left: 5%;
-    margin-right: 5%;
-}
+
 .add-book:after{
     content: '';
     display: block;
     clear: both;
+}
+button{
+   
+   
+    outline: none;
+    border: none;
+    font-family: 'Lobster',cursive;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    width: 100px;
+    float: left;
+    /* margin: 20px 10px; */
+    border-left: 0;
+    color: white;
+    margin-right: 10px;
+}
+
+button:hover{
+    background-color: green;
 }
